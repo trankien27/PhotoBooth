@@ -4,11 +4,9 @@ namespace PhotoBooth.Context;
 
 public class MyDbContext: DbContext
 {
-    protected readonly IConfiguration Configuration;
+    public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
 
-    public MyDbContext(IConfiguration configuration)
     {
-        Configuration = configuration;
     }
     
     public DbSet<Layout> Layouts { get; set; }
@@ -18,6 +16,7 @@ public class MyDbContext: DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=Funstudio.db");
+        
+  optionsBuilder.UseSqlite("Data Source=FunStudio.db");
     }
 }

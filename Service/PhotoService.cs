@@ -10,6 +10,10 @@ public class PhotoService : IPhoto
 {
     private readonly MyDbContext _dbContext;
 
+    public List<LayoutPicture> LayoutPictures()
+    {
+        return _dbContext.LayoutPictures.ToList();
+    }
     public PhotoService(MyDbContext dbContext)
     {
         _dbContext = dbContext;

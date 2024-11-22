@@ -10,7 +10,7 @@ using PhotoBooth.Context;
 namespace PhotoBooth.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20241122015417_InitialCreate")]
+    [Migration("20241122084430_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
